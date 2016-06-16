@@ -1,5 +1,9 @@
 # Random Reader
 
+Some scripts to make it easier to read random old journal entries.
+
+## Install
+
 - Add something like the following to your `.bashrc` or `.bash_profile`:
 
 ```bash
