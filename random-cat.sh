@@ -23,3 +23,4 @@ fi
 # Randomly select a file.
 index=$((($RANDOM * $RANDOM) % numDocs));  # 16-bit just isn't enough
 cat ${array[index]};
+echo ""  # we want to ensure a newline after the file is printed.
