@@ -17,8 +17,11 @@ fi
 
 # create the file name
 stamp=$(date "+%Y-%m-%d");
-filepath="${directory}/${stamp}_${subject}.md";
+dashedSubject=${subject// /-}
+filename="${stamp}_${dashedSubject}.md";
+filepath="${directory}/${filename}";
 
-# open text editor
+# prep and open file
 echo "writing to $filepath";
-subl $filepath;
+printf "\n# ${stamp} ${subject}\n\n" > "$filepath";
+subl "${filepath}:4";  #we open on line 4; if this is a new file, that will be the last line.

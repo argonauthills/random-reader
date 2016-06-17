@@ -22,4 +22,4 @@ fi
 
 # Randomly select a file.
 index=$((($RANDOM * $RANDOM) % numDocs));  # 16-bit just isn't enough
-subl ${array[index]};
+cat ${array[index]};
